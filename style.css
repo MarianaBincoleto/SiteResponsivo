@@ -6,11 +6,12 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 body {
     font-size: 100%;
-    background: linear-gradient(rgb(223, 181, 104), rgb(164, 123, 35));
+    background: linear-gradient(#ffff);
 
 }
 
@@ -23,68 +24,206 @@ body {
 }
 
 .logo-cabecalho {
-    height: 100px;
-    border-radius: 50%;
+    width: 160px;
+    /*largura */
+    height: 90px;
+    /*altura */
+    margin-left: 30px;
 }
 
 .menu-cabecalho {
     display: flex;
     gap: 60px;
     /*espaçamento entre os "titulos" */
-}
-
-.descricao-cabecalho {
     font-family: 'Sarala', sans-serif;
-    color: aliceblue;
-    /* font-weight: 100; */
-    font-size: 19px;
 }
 
-.descricao-cabecalho:hover {
-    background-color: rgba(251, 215, 108, 0.836);
-    border-radius: 10px;
+
+.menu-cabecalho a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    transition: color 0.3s ease;
+    /*Efeito suave */
 }
 
-h1 {
+a:hover {
+    color: #6100ac;
+}
+
+.filtro {
     display: flex;
-    align-items: center;
     justify-content: center;
-    border-top: 0.4px solid #ebd3c0;
-    padding-top: 3%;
-    color: aliceblue;
+    /*centraliza horizontalmente */
+    gap: 25px;
+    /*espaçamento entre os "titulos" */
+    padding: 30px;
+    /*espaçamento do inicio da tela até essa class filtro */
+    width: 90%;
+    /* Responsivo */
+    margin-left: 60px;
+    /*margin da esquerda para a direita */
+
+}
+
+select,
+.btn_filtro {
+    font-size: 18px;
+    /* tamanho do caracter */
+    text-align: center;
+    /* alinhamento dos caracteres */
+    border-radius: 5px;
+    /* arredondamento das bordas dos selects */
+    height: 30px;
+    /*altura */
+    width: 175px;
+    /*espaçamento dos selects - largura */
+}
+
+/* select:hover {
+    background-color: #0B7DFF;
+} */
+
+.btn_filtro {
+    border: 1px solid #ccc;
+    /* tamanho e cor da borda */
+    background-color: #6100ac;
+    color: white;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-cabecalho {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
 }
 
 .explicacao {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 24px;
+    color: #6100ac;
+    border-top: 0.4px solid #6100ac;
+}
+
+.carrossel-container {
+    position: relative;
+    /* alinha o carrossel no centro */
+    width: 80%;
+    /* Ajuste conforme necessário */
+    display: flex;
+    margin: auto;
+    overflow: hidden;
+    /* Esconde imagens extras fora da tela */
+}
+
+.carrossel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides .btn_saibaMais {
+    background-color: #0B7DFF;
+    color: white;
     font-size: 20px;
-    color: aliceblue;
+    border-radius: 4px;
+    height: 30px;
+    /*altura */
+    width: 120px;
+    /*largura */
 }
 
-.central {
-    padding: 50px;
-    margin-left: 350px;
+.slides .btn_mensagem {
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    border-radius: 4px;
+    height: 30px;
+    /*altura */
+    width: 120px;
+    /*largura */
 }
 
-.roupa1 {
-    height: 450px;
-    padding: 20px;
-    border-radius: 10%;
+.slide {
+    width: 300px;
+    /* largura de cada imagem */
+    height: 200px;
+    /* altura de cada imagem */
+    border-radius: 3%;
+    /* arredondamento das bordas das imagens */
+    margin-right: 10px;
+    /* espaço entre imagens */
 }
 
-.roupa2 {
-    height: 460px;
-    padding: 20px;
-    border-radius: 10%;
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+    /* Garante que os botões fiquem acima do carrossel */
+}
+
+.prev {
+    left: 0;
+    /* Ajusta a posição do botão anterior */
+}
+
+.next {
+    right: 0;
+    /* Ajusta a posição do botão próximo */
+}
+
+.propaganda {
+    text-align: left;
 }
 
 .rodape {
-    border-top: 0.4px solid #ebd3c0;
+    display: flex;
+    justify-content: space-between;
+    /*o primeiro item fica encostado a esquerda e o último a direita */
+    padding: 30px;
+    background-color: #56525b;
+    color: white;
 }
 
-.img-rodape {
-    height: 300px;
-    display: block;
-    margin: 0 auto;
+.rodape .inf_adicionais {
+    text-align: left;
+    /*primeiro alinha o texto a esquerda (fica grudado a borda) */
+    margin-left: 80px;
+    /*depois consegue desgrudar da borda pela % ou px */
+    font-size: 18px;
+}
+
+.rodape .pesquisa {
+    margin-right: 80px;
+    /*o primeiro item fica encostado a esquerda e o último a direita */
+}
+
+.footer {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    /*espaçamento do inicio da tela até a class footer, altura*/
 }

@@ -10,27 +10,284 @@
 
 <body>
     <header class="cabecalho">
-        <img class="logo-cabecalho" src="logo.jpg">
+        <img class="logo-cabecalho" src="logo.jpeg">
+
         <nav class="menu-cabecalho">
-            <a class="descricao-cabecalho">Trabalhe Conosco</a>
-            <a class="descricao-cabecalho">Quem somos</a>
-            <a class="descricao-cabecalho">Produtos</a>
-            <a class="descricao-cabecalho">Entrar</a>
+            <a href="quemSomos.html">Quem somos</a>
+            <a href="lançamentos.html">Lançamentos</a>
+            <a href="anunciar.html">Anunciar</a>
+            <a href="contato.html">Contato</a>
+            <a class="entrar" href="entrar.html">Entrar</a>
         </nav>
     </header>
 
     <main class="conteudo-principal">
-        <h1>Seja inspiração por onde andar, com leveza e beleza</h1>
-        <p class="explicacao">Roupas 100% sustentáveis, leves e elegantes para todas ocasiões</p>
-        <div class="central">
-            <img class="roupa1" src="roupa1.jpg">
-            <img class="roupa2" src="roupa2.jpg">
-        </div>
-    </main>
 
+        <div class="filtro">
+            <select class="Cidade">
+                <option>Cidade</option>
+                <option>Bauru</option>
+                <option>Botucatu</option>
+                <option>Jaú</option>
+                <option>Lençois Paulista</option>
+                <option>Marília</option>
+                <option>Ourinhos</option>
+            </select>
+
+            <select class="Finalidade">
+                <option>Finalidade</option>
+                <option>Alugar</option>
+                <option>Comprar</option>
+            </select>
+
+            <select class="Tipo">
+                <option>Tipo</option>
+                <option>Casa</option>
+                <option>Apartamento</option>
+                <option>Terreno</option>
+            </select>
+
+            <select class="Dormitórios">
+                <option>Dormitórios</option>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+            </select>
+
+            <select class="Garagem">
+                <option>Garagem</option>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+            </select>
+
+            <button class="btn_filtro"> PESQUISAR </button><br>
+        </div>
+
+        <p class="explicacao">Destaques de locação</p><br><br>
+
+        <div class="carrossel-container">
+            <button class="prev" onclick="mudarSlide(-1,'locacao')">&#10094;</button>
+            <div class="carrossel" id="locacao">
+                <div class="slides">
+                    <div class="propaganda">
+                        <img src="locacao1.jpg" class="slide">
+                        <h2>R$ 1050,00</h2>
+                        <p>Jardim Terra Branca - Bauru<br>-03 Dormitórios <br>-02 Banheiros <br>-Garagem para 2 carros
+                        </p>
+                        <button class="btn_saibaMais">Saiba Mais</button>
+                        <button class="btn_mensagem">Mensagem</button>
+                    </div>
+                    <div class="propaganda">
+                        <img src="locacao2.jpg" class="slide">
+                        <h2>R$ 800,00</h2>
+                        <p>Nova Esperança - Bauru<br>-02 Dormitórios <br>-01 Banheiro <br>-Garagem para 01 carro </p>
+                        <button class="btn_saibaMais">Saiba Mais</button>
+                        <button class="btn_mensagem">Mensagem</button>
+                    </div>
+                    <div class="propaganda">
+                        <img src="locacao3.jpg" class="slide">
+                        <h2>R$ 750,00</h2>
+                        <p>Geisel - Bauru<br>-02 Dormitórios <br>-01 Banheiro <br>-Garagem para 02 carros </p>
+                        <button class="btn_saibaMais">Saiba Mais</button>
+                        <button class="btn_mensagem">Mensagem</button>
+                    </div>
+                    <div class="propaganda">
+                        <img src="locacao4.jpg" class="slide">
+                        <h2>R$ 1100,00</h2>
+                        <p>Vila Engler - Bauru<br>-03 Dormitórios<br>-01 suite <br>-2 Banheiros <br>-Garagem para 02
+                            carros </p>
+                        <button class="btn_saibaMais">Saiba Mais</button>
+                        <button class="btn_mensagem">Mensagem</button>
+                    </div>
+                    <div class="propaganda">
+                        <img src="locacao5.jpg" class="slide">
+                        <h2>R$ 950,00</h2>
+                        <p>Vânia Maria - Bauru<br>-02 Dormitórios <br>-02 Banheiros <br>-Garagem para 01 carro </p>
+                        <button class="btn_saibaMais">Saiba Mais</button>
+                        <button class="btn_mensagem">Mensagem</button>
+                    </div>
+                    <div class="propaganda">
+                        <img src="locacao6.jpg" class="slide">
+                        <h2>R$ 1300,00</h2>
+                        <p>Araruna - Bauru<br>-03 Dormitórios <br>-02 Banheiros <br>-Garagem para 03 carros </p>
+                        <button class="btn_saibaMais">Saiba Mais</button>
+                        <button class="btn_mensagem">Mensagem</button>
+                    </div>
+                    <div class="propaganda">
+                        <img src="locacao7.jpg" class="slide">
+                        <h2>R$ 890,00</h2>
+                        <p>Cond. Terra Nova - Bauru<br>-02 Dormitórios <br>-01 Banheiro <br>-Garagem para 02 carros </p>
+                        <button class="btn_saibaMais">Saiba Mais</button>
+                        <button class="btn_mensagem">Mensagem</button>
+                    </div>
+                    <div class="propaganda">
+                        <img src="locacao8.jpg" class="slide">
+                        <h2>R$ 1150,00</h2>
+                        <p>Jardim Redentor - Bauru<br>-02 Dormitórios <br>-02 Banheiros <br>-Garagem para 02 carros </p>
+                        <button class="btn_saibaMais">Saiba Mais</button>
+                        <button class="btn_mensagem">Mensagem</button>
+                    </div>
+                    <div class="propaganda">
+                        <img src="locacao9.jpg" class="slide">
+                        <h2>R$ 820,00</h2>
+                        <p>Mary Dota - Bauru<br>-02 Dormitórios <br>-01 Banheiro <br>-Garagem para 02 carros </p>
+                        <button class="btn_saibaMais">Saiba Mais</button>
+                        <button class="btn_mensagem">Mensagem</button>
+                    </div>
+                </div>
+            </div>
+            <button class="next" onclick="mudarSlide(1,'locacao')">&#10095;</button><br>
+        </div>
+        <br>
+        <br>
+        <p class="explicacao">Destaques de venda</p><br><br>
+        <div class="carrossel-container">
+            <button class="prev" onclick="mudarSlide(-1,'venda')">&#10094;</button>
+            <div class="carrossel" id="venda">
+                <div class="slides">
+                    <div class="propaganda">
+                        <img src="casa1.jpg" class="slide">
+                        <h2>R$ 150.000</h2>
+                        <p>Bauru <br>-200m² <br>-Jardim Ouro Verde</p>
+                        <button class="btn_saibaMais">Saiba Mais</button>
+                        <button class="btn_mensagem">Mensagem</button>
+                    </div>
+                    <div class="propaganda">
+                        <img src="casa2.jpg" class="slide">
+                        <h2>R$ 160.000</h2>
+                        <p>Bauru <br>-120m² <br>-Jardim Bela Vista</p>
+                        <button class="btn_saibaMais">Saiba Mais</button>
+                        <button class="btn_mensagem">Mensagem</button>
+                    </div>
+                    <div class="propaganda">
+                        <img src="casa3.jpg" class="slide">
+                        <h2>R$ 120.000</h2>
+                        <p>Botucatu <br>-100m² <br>-Vila Engler</p>
+                        <button class="btn_saibaMais">Saiba Mais</button>
+                        <button class="btn_mensagem">Mensagem</button>
+                    </div>
+                    <div class="propaganda">
+                        <img src="casa5.jpg" class="slide">
+                        <h2>R$ 200.000</h2>
+                        <p>Marília <br>-210m² <br>-Jardim Nova Esperança</p>
+                        <button class="btn_saibaMais">Saiba Mais</button>
+                        <button class="btn_mensagem">Mensagem</button>
+                    </div>
+                    <div class="propaganda">
+                        <img src="casa6.jpg" class="slide">
+                        <h2>R$ 250.000</h2>
+                        <p>Jaú <br>-250m² <br>-Vila Santa Mariana</p>
+                        <button class="btn_saibaMais">Saiba Mais</button>
+                        <button class="btn_mensagem">Mensagem</button>
+                    </div>
+                    <div class="propaganda">
+                        <img src="casa4.png" class="slide">
+                        <h2>R$ 420.000</h2>
+                        <p>Bauru <br>-300m² <br>-Jardim Estoril</p>
+                        <button class="btn_saibaMais">Saiba Mais</button>
+                        <button class="btn_mensagem">Mensagem</button>
+                    </div>
+                    <div class="propaganda">
+                        <img src="casa7.jpg" class="slide">
+                        <h2>R$ 310.000</h2>
+                        <p>Ourinhos <br>-190m² <br>-Jardim Verde</p>
+                        <button class="btn_saibaMais">Saiba Mais</button>
+                        <button class="btn_mensagem">Mensagem</button>
+                    </div>
+                    <div class="propaganda">
+                        <img src="casa8.jpg" class="slide">
+                        <h2>R$ 270.000</h2>
+                        <p>Marília <br>-130m² <br>-Vila Santista</p>
+                        <button class="btn_saibaMais">Saiba Mais</button>
+                        <button class="btn_mensagem">Mensagem</button>
+                    </div>
+                    <div class="propaganda">
+                        <img src="casa9.jpg" class="slide">
+                        <h2>R$ 300.000</h2>
+                        <p>Lençois Paulista <br>-180m² <br>-Vila Samaritana</p>
+                        <button class="btn_saibaMais">Saiba Mais</button>
+                        <button class="btn_mensagem">Mensagem</button>
+                    </div>
+                </div>
+            </div>
+            <button class="next" onclick="mudarSlide(1,'venda')">&#10095;</button><br>
+        </div>
+        <script src="script.js"></script>
+
+    </main>
+    <br>
     <footer class="rodape">
-        <img class="img-rodape" src="rodape.png">
+        <div class="inf_adicionais">
+            <h3>Institucional</h3>
+            <p>Trabalhe conosco</p>
+            <p>Blog</p>
+            <p>Ajuda</p>
+        </div>
+
+        <div class="anunciantes">
+            <h3>Anunciar imóveis</h3>
+            <p>Anunciar como proprietário</p>
+            <p>Anunciar como corretor</p>
+        </div>
+
+        <div class="pesquisa">
+            <h3>Encontre Imóveis</h3>
+            <p>Alugar</p>
+            <p>Comprar</p>
+            <p>Descobrir</p>
+            <p>Simulador de financiamento</p>
+        </div>
+
     </footer>
+
+    <div class="footer">
+        <p>&copy - Todos os direitos reservados</p>
+        <p>Mariana Bincoleto Segura</p>
+    </div>
+
+
 </body>
+
+<script>
+    let slideIndex = {
+        locacao: 0,
+        venda: 0
+    };
+
+    function mudarSlide(n, carrosselId) { //função criada para iniciar os carrosseis e armazenar as posições dos mesmos
+        let slideIndex = {
+            locacao: 0,
+            venda: 0
+        }
+    };
+
+    function mudarSlide(n, carrosselId) {
+        let slides = document.querySelectorAll(`#${carrosselId} .slide`);
+        let carrossel = document.querySelector(`#${carrosselId} .slides`);
+
+        if (!slides.length || !carrossel) return;
+
+        let slideWidth = slides[0].getBoundingClientRect().width;
+        let totalSlides = slides.length;
+
+        slideIndex[carrosselId] += n;
+
+        if (slideIndex[carrosselId] >= totalSlides) {
+            slideIndex[carrosselId] = 0;
+        } else if (slideIndex[carrosselId] < 0) {
+            slideIndex[carrosselId] = totalSlides - 1;
+        }
+
+        carrossel.style.transform = `translateX(${-slideIndex[carrosselId] * slideWidth}px)`;
+    }
+    // // Adiciona rotação automática a cada 3 segundos
+    // setInterval(() => {
+    //     mudarSlide(1); // Move para o próximo slide automaticamente
+    // }, 3000);
+</script>
+
 
 </html>
