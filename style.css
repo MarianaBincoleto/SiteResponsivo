@@ -230,26 +230,26 @@ select,
 }
 
 .rodape {
+    text-decoration: none;
     display: flex;
-    justify-content: space-between;
+    columns: 3;
+    justify-content:space-around;
     /*o primeiro item fica encostado a esquerda e o último a direita */
     padding: 30px;
     background-color: #67646b;
-    color: white;
-    font-size: 20px;
-
+    color: rgb(255, 255, 255);
+    font-size: 17px;
 }
 
-.rodape .inf_adicionais {
-    text-align: left;
-    /*primeiro alinha o texto a esquerda (fica grudado a borda) */
-    margin-left: 80px;
-    /*depois consegue desgrudar da borda pela % ou px */
+.rodape h4 {
+    font-size: 19px;
+}
+.rodape a {
+    color: #fff;
 }
 
-.rodape .pesquisa {
-    margin-right: 80px;
-    /*o primeiro item fica encostado a esquerda e o último a direita */
+a:hover {
+    text-decoration: underline; /* adiciona sublinhado quando passa o mouse */
 }
 
 .footer {
